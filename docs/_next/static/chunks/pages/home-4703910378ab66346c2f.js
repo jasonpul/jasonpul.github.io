@@ -1,1 +1,0 @@
-_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[8],{"1iFP":function(_,n,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/home",function(){return w("KI7k")}])}},[["1iFP",0,2,1,3]]]);
