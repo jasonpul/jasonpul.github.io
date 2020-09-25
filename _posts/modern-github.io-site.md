@@ -300,7 +300,7 @@ And one last thing. The styles provided by `github-markdown-css` target only ele
 
 Now if you refresh the page, you'll notice a nicely rendered, GitHub style page. However, if you check out `second-post`, you'll see that the codeblocks don't look great. The blocks are highlighting the code. Let's take care of that.
 
-Back in `\[slug\].js`, we'll need to do a few imports. I'll be using [highlight.js](https://www.npmjs.com/package/highlight.js) but you can use [Prism](https://www.npmjs.com/package/prismjs) if you'd like. After that, you'll have to decide on a styling theme. Thankfully, the `react-syntax-highlighter` team have created a awesome (demo site)[https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html] where you can try out different themes to see what you like. Just select your desired syntax highliter (`highlight.js` or `Prism`) then scroll through the different themes until you find something you like. I'll go with the `github` style for this guide:
+Back in `\[slug\].js`, we'll need to do a few imports. I'll be using [highlight.js](https://www.npmjs.com/package/highlight.js) but you can use [Prism](https://www.npmjs.com/package/prismjs) if you'd like. After that, you'll have to decide on a styling theme. Thankfully, the `react-syntax-highlighter` team have created a awesome [demo site](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/prism.html) where you can try out different themes to see what you like. Just select your desired syntax highliter (`highlight.js` or `Prism`) then scroll through the different themes until you find something you like. I'll go with the `github` style for this guide:
 
 ```jsx
 //using highlight.js
@@ -374,4 +374,11 @@ With that update, we've completed writing the static site. You can now add posts
 
 I'm assuming you're fimilar with how to push repositories to GitHub. So I won't be going over that. There are requirements on repositiory names, so please checkout[ GitHub Pages](https://pages.github.com/) if you don't already have one setup. The following steps assume that you have setup a GitHub Page repo and have add it's link as a remote repository to your local project.
 
-Open up `package.json` and add `"export": "next export -o docs"` to the `scripts` object. This will tell Next.js to export your project into static files within the `\docs` directory.
+Open up `package.json` and add `"export": "next export -o docs"` to the `scripts` object. This will tell Next.js to export your project into static files within the `\docs` directory. Now, run the following commands
+
+```sh
+npm run build
+npm run export
+```
+
+After the export is complete, you'll need to add, commit and push changes to your GitHub repository. With the push finished, you can go to GitHub and change the `Source` directory of your GitHub Page using this [guide](https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
