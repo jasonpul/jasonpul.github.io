@@ -50,7 +50,7 @@ h2:not(:first-child) {
 .container {
   margin: 25px auto;
   max-width: 1000px;
-  padding: 0 50px 50px 50px;
+  padding: 0 25px 50px 25px;
 }
 
 .Header {
@@ -115,6 +115,7 @@ h2:not(:first-child) {
   display: inline;
   font-size: 2rem;
   text-align: center;
+  line-height: 1.75;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   color: #a7a7a7;
@@ -148,6 +149,7 @@ h2:not(:first-child) {
   border-collapse: collapse;
   margin-bottom: 20px;
   margin-left: 15px;
+  width: clamp(100px, 80%, 800px);
 }
 
 .markdown th {
@@ -157,7 +159,7 @@ h2:not(:first-child) {
 .markdown th,
 tr,
 td {
-  padding: 10px 50px;
+  padding: 10px 10px;
   text-align: center;
   border: 1px solid grey;
 }
